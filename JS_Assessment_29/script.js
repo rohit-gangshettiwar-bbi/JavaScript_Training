@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function createNewItem(text) {
         const listItem = document.createElement('li');
         const deleteButton = document.createElement('button');
-        deleteButton.textContent = 'Delete';
+        deleteButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
 
         listItem.textContent = text;
         listItem.appendChild(deleteButton);
