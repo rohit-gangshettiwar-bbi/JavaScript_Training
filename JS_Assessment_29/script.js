@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const removeLastItemButton = document.getElementById('remove-button');
     const itemList = document.getElementById('item-list');
     const remainingItems = document.getElementById('remaining-items');
-
+  
    //Count remaining item in list
     let listCount = 0;
 
@@ -56,18 +56,42 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Function to remove the last item
     function removeLastItem() {
+
         if (listCount > 0) {
-            const lastItem = itemList.lastElementChild;
-            if (lastItem) {
-                lastItem.remove();
+    
+            
+    
+            const notCompletedItems = itemList.querySelectorAll('li:not(.completed)');
+    
+            if (notCompletedItems.length > 0) {
+    
+       
+    
+                const lastNotCompletedItem = notCompletedItems[notCompletedItems.length - 1];
+    
+                lastNotCompletedItem.remove();
+    
                 listCount--;
+    
                 updateCounter();
+    
+            } else {
+    
+                alert('All items are marked as completed or there are no items to remove.');
+    
             }
+    
         } else {
+    
             alert('There are no items to remove.');
+    
         }
+    
     }
 
+
+ 
+   
     // Function to update the remaining items counter
     function updateCounter() {
         remainingItems.textContent = listCount;
