@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const addItemButton = document.getElementById('add-button');
     const removeLastItemButton = document.getElementById('remove-button');
     const itemList = document.getElementById('item-list');
-
+    const remainingItems = document.getElementById('remaining-items');
   
    //Count remaining item in list
     let listCount = 0;
