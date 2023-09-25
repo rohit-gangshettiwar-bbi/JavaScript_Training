@@ -1,0 +1,47 @@
+/** @format */
+
+body,
+html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	height: 300vh; /* Three times the viewport height */
+	overflow-y: scroll; /* Enable vertical scrolling */
+}
+
+.page {
+	height: 100vh; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #f0f0f0;
+}
+
+.fade-element {
+	width: 200px;
+	height: 100px;
+	background-color: rgba(255, 0, 0, 0); /* Start with 0% opacity */
+	display: block;
+	opacity: 0; /* initial opacity to 0 */
+	animation: fadeIn 2s ease-in; /* Use a 2-second fade-in animation */
+}
+
+/* Show the element on the second page */
+.page:nth-child(2) .fade-element {
+	animation: fadeIn 4s ease-in; 
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+		background-color: rgba(255, 0, 0, 0.5); /* Red color with 50% opacity */
+	}
+}
