@@ -18,6 +18,7 @@ function initResizerFn(resizer, sidebar, movableGrid) {
     const dx = e.clientX - x;
     const cw = w + dx;
 
+    
     if (cw < 600 && cw>100) {
       sidebar.style.width = `${cw}px`;
       movableGrid.style.marginLeft = `${cw + 40}px`; // Adjust the value according to your design
