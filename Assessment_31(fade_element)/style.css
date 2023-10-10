@@ -28,12 +28,13 @@ html {
 	background-color: rgba(255, 0, 0, 0); /* Start with 0% opacity */
 	display: block;
 	opacity: 0; /* initial opacity to 0 */
-	animation: fadeIn 2s ease-in; /* Use a 2-second fade-in animation */
+	/* animation: fadeIn 2s ease-in; /* Use a 2-second fade-in animation */ 
 }
 
 /* Show the element on the second page */
 .page:nth-child(2) .fade-element {
-	animation: fadeIn 4s ease-in; 
+	animation: fadeIn 8s ease; 
+
 }
 
 @keyframes fadeIn {
